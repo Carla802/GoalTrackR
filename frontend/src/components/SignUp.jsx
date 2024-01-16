@@ -1,6 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import { ChevronLeft } from "react-bootstrap-icons";
 const SignUp = () => {
   const navigate = useNavigate();
 
@@ -62,9 +63,18 @@ const SignUp = () => {
         <div>
         <div>
           <div className="py-4 border-b mb-10">
-            <h1 className="text-center text-2xl mb-8 font-[500]">
-              Define your Profile
+          <div className="flex items-center justify-between">
+            <div className="flex">
+              <Link to={"/"}>
+                <ChevronLeft className="w-6 h-6"></ChevronLeft>
+              </Link>
+            </div>
+            <h1 className="font-[600] capitalize text-2xl pt-4 mb-4" style={{color: "var(--dark-color)"}}>
+              Define your profile
             </h1>
+            <div className="flex items-center">
+            </div>
+          </div>
             <div className="mb-4 flex items-center">
               <label className="mr-2" style={{ width: '110px' }}>Name*</label>
               <input

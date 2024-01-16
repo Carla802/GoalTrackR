@@ -48,16 +48,6 @@ function Home () {
     }
   }, []);
 
-  const weeklyChallenges_test = [
-    { name: 'Workout 3 times', progress: 0.30 },
-    { name: 'Eat fish twice', progress: 0.70 },
-  ];
-
-  const dailyChallenges_test = [
-    { name: 'Drink 2L', progress: 0.40 },
-    { name: 'Do 20min of yoga', progress: 0.60 },
-  ];
-
   const [deleteWeekly, setDeleteWeekly] = useState(Array(weeklyChallenges.length).fill(false));
   const [deleteDaily, setDeleteDaily] = useState(Array(weeklyChallenges.length).fill(false));
 
@@ -135,7 +125,7 @@ function Home () {
                   ) : (
                     <p>No main goal selected</p>
                   )}</h4>
-                <meter value={mainGoal.progress} />
+                <meter value={mainGoal.progress} content="width=device-width, initial-scale=1.0"/>
               </div>
             </div>
           </div>
