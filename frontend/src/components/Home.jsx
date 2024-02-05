@@ -118,7 +118,8 @@ function Home () {
                 </svg>
               </button>
             </div>
-            <div className="border-2 p-4 rounded-lg border-[rgba(0,0,0,.1)]">
+            <div className="flex items-center gap-4">
+            <div className="border-2 border-[rgba(0,0,0,.1)] rounded-lg p-4 w-full">
               <div className="flex justify-between items-center">
                 <h4>{mainGoal.name !== undefined ? (
                     <p>{(mainGoal.name === "Gain weight" ? "Gain " : "Lose ") + (mainGoal.goal ? (Math.abs(parseInt(mainGoal.goal)-parseInt(mainGoal.start)) + "kg") : "weight")}</p>
@@ -127,6 +128,7 @@ function Home () {
                   )}</h4>
                 <meter value={mainGoal.progress} content="width=device-width, initial-scale=1.0"/>
               </div>
+            </div>
             </div>
           </div>
           <div className="mb-6">
